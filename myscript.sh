@@ -76,3 +76,18 @@ then
 else
     echo "$FILE is not file"
 fi
+
+#CASE STATEMENTS
+
+read -p "Are U 21 or over? Y/N " ANSWER
+case "$ANSWER" in
+ [yY] | [yY][eE][sS])
+    echo "You can have a beer :) "
+    ;;
+ [nN] | [nN][oO])
+    echo "Sorry, No drinking"
+    ;;
+ *)
+  echo "Please enter y/yes or n/No"
+  ;;
+  esac
