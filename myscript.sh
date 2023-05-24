@@ -129,7 +129,7 @@ function sayHello() {
 #   echo "Hello, I am $1 and I am $2"
 # }
 
-# greet "Brad" "36"
+# greet "Sade" "26"
 
 # CREATE FOLDER AND WRITE TO A FILE
 # mkdir hello
