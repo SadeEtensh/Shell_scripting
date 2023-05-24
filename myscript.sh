@@ -2,7 +2,7 @@
 
 
 #VARIABLES
-NAME="Jack"
+#NAME="Jack"
 
 #echo "My Name is $NAME"
 
@@ -26,15 +26,15 @@ NAME="Jack"
 # fi
 
 #ELSE-IF (elif)
-if [ "$NAME" == "Sade" ]
-then
-    echo "Your Name is Sade"
-elif [ "$NAME" == "Jack" ]
-then
-    echo "Your name is JacK"
-else
-    echo "Your name is not Sade or Jack"
-fi
+# if [ "$NAME" == "Sade" ]
+# then
+#     echo "Your Name is Sade"
+# elif [ "$NAME" == "Jack" ]
+# then
+#     echo "Your name is JacK"
+# else
+#     echo "Your name is not Sade or Jack"
+# fi
 
 
 #Comparison
@@ -45,15 +45,15 @@ fi
 # val1 -lt val2 Returns true if val1 is less than val2
 # val1 -le val2 Returns true if val1 is less than or equal to val2
 
-NUM1=30
-NUM2=5
+# NUM1=30
+# NUM2=5
 
-if [ "$NUM1" -gt "$NUM2" ]
-then 
-    echo "$NUM1 is greater than $NUM2"
-else
-    echo "$NUM1 is Less than $NUM2"
-fi
+# if [ "$NUM1" -gt "$NUM2" ]
+# then 
+#     echo "$NUM1 is greater than $NUM2"
+# else
+#     echo "$NUM1 is Less than $NUM2"
+# fi
 
 ##########
 #File Conditions
@@ -68,26 +68,44 @@ fi
 # -x    True if the file is an executable
 ########
 
-FILE="test.txt"
+# FILE="test.txt"
 
-if [ -e "$FILE" ]
-then
-    echo "$FILE is a file"
-else
-    echo "$FILE is not file"
-fi
+# if [ -e "$FILE" ]
+# then
+#     echo "$FILE is a file"
+# else
+#     echo "$FILE is not file"
+# fi
 
 #CASE STATEMENTS
 
-read -p "Are U 21 or over? Y/N " ANSWER
-case "$ANSWER" in
- [yY] | [yY][eE][sS])
-    echo "You can have a beer :) "
-    ;;
- [nN] | [nN][oO])
-    echo "Sorry, No drinking"
-    ;;
- *)
-  echo "Please enter y/yes or n/No"
-  ;;
-  esac
+# read -p "Are U 21 or over? Y/N " ANSWER
+# case "$ANSWER" in
+#  [yY] | [yY][eE][sS])
+#     echo "You can have a beer :) "
+#     ;;
+#  [nN] | [nN][oO])
+#     echo "Sorry, No drinking"
+#     ;;
+#  *)
+#   echo "Please enter y/yes or n/No"
+#   ;;
+#   esac
+
+#LOOPS
+# NAMES="Sade Mark Jony Iris"
+
+# for NAME in $NAMES
+#     do 
+#      echo "Hello $NAME"
+# done
+
+
+# FOR LOOP TO RENAME FILES
+FILES=$(ls *.txt)
+NEW="new"
+for FILE in $FILES  
+  do
+    echo "Renaming $FILE to new-$FILE"
+    mv $FILE $NEW-$FILE
+done
